@@ -7,6 +7,11 @@
     <artifactId>springcloudlearning</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>ServiceB</module>
+        <module>ServiceB-client</module>
+        <module>ServiceB-server</module>
+    </modules>
 
     <name>SpringCloudLearning</name>
     <description>spring cloud learning</description>
@@ -57,7 +62,21 @@
             <artifactId>consul-client</artifactId>
             <version>0.12.5</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>2.1.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
