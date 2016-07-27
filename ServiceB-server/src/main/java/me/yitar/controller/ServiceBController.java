@@ -4,6 +4,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import me.yitar.client.ServiceAClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,18 +14,21 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by Yitar on 2016/7/27.
  */
-@Api("ServiceAApi")
+@Api("ServiceBApi")
 @RestController
-@RequestMapping("/serviceA")
-public class ServiceAController {
+@RequestMapping("/ServiceB")
+public class ServiceBController {
 
-    @ApiOperation("greeting")
+    @Autowired
+    private ServiceAClient serviceAClient;
+
+    @ApiOperation("微服务相互调用")
     @ApiImplicitParams({
-        @ApiImplicitParam(name = "userName",paramType = "path", dataType = "string", required = true)
+        @ApiImplicitParam(name = "userName", paramType = "path", dataType = "string", required = true)
     })
     @RequestMapping(value = "/hello/{userName}", method = RequestMethod.GET)
-    public String greeting (@PathVariable("userName") String userName) {
-        return "Hello, " + userName;
+    public String greeting(@PathVariable("userName") String userName) {
+        return serviceAClient.greeting(userName);
     }
 
 }

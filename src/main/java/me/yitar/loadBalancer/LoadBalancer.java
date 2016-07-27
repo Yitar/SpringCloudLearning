@@ -37,9 +37,12 @@ public class LoadBalancer {
     * */
     public ServerAddress chooseServer(String serviceName) {
         List<ServerAddress> servers = getAvailableServerList(serviceName);
-            Random random = new Random();
-            int index = random.nextInt(servers.size());
-            return servers.get(index);
+        Random random = new Random();
+        int index = 0;
+        if (!servers.isEmpty()) {
+            index = random.nextInt(servers.size());
+        }
+        return servers.get(index);
     }
 
 }

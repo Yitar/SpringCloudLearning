@@ -12,14 +12,6 @@
 
     <artifactId>ServiceA-client</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>me.yitar</groupId>
-            <artifactId>springcloudlearning</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>

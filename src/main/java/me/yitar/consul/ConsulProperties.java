@@ -13,6 +13,8 @@ import org.springframework.stereotype.Component;
 @Setter
 public class ConsulProperties {
 
+    @Value("${service.name}")
+    private String serviceName;
     @Value("${service.port:8080}")
     private int servicePort;
     @Value("${service.tag:dev}")

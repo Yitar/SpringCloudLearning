@@ -7,11 +7,6 @@
     <artifactId>springcloudlearning</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <modules>
-        <module>ServiceB</module>
-        <module>ServiceB-client</module>
-        <module>ServiceB-server</module>
-    </modules>
 
     <name>SpringCloudLearning</name>
     <description>spring cloud learning</description>
