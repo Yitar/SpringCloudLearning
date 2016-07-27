@@ -7,10 +7,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringCloudLearningApplication {
 
-	public static void main(String[] args) {
-
+	public void run(String[] args) {
 		SpringApplication springApplication = new SpringApplication(SpringCloudLearningApplication.class);
 		springApplication.addListeners(new ConsulRegisterListener());
 		springApplication.run(args);
+	}
+
+	public static void main(String[] args) {
+
+
 	}
 }

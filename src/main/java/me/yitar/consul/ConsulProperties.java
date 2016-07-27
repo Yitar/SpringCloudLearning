@@ -1,7 +1,7 @@
 package me.yitar.consul;
 
-import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -9,11 +9,12 @@ import org.springframework.stereotype.Component;
  * Created by Yitar on 2016/7/26.
  */
 @Component
-@Data
+@Getter
+@Setter
 public class ConsulProperties {
 
     @Value("${service.name}")
-    private String servicename;
+    private String serviceName;
     @Value("${service.port:8080}")
     private int servicePort;
     @Value("${service.tag:dev}")

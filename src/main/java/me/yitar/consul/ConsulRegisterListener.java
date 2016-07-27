@@ -24,7 +24,7 @@ public class ConsulRegisterListener implements ApplicationListener<ContextRefres
                     properties.getServicePort(),
                     URI.create(properties.getHealthUrl()).toURL(),
                     properties.getHealthInterval(),
-                    properties.getServicename(),
+                    properties.getServiceName(),
                     properties.getServiceTag()
             );
         } catch (MalformedURLException e) {
