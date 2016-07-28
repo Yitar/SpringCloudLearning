@@ -4,7 +4,6 @@ import me.yitar.api.ServiceAApi;
 import me.yitar.retrofit.RestAdapterConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import retrofit2.Retrofit;
 
 /**
  * Created by Yitar on 2016/7/27.
