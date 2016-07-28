@@ -9,6 +9,6 @@ import retrofit2.http.Path;
 public interface ServiceAApi {
 
     @GET("/ServiceA/hello/{userName}")
-    public String greeting(@Path("userName") String userName);
+    String greeting(@Path("userName") String userName);
 
 }
