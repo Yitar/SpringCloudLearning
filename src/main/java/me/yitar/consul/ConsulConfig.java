@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by Yitar on 2016/7/26.
  */
+@Deprecated
 @Configuration
 public class ConsulConfig {
 

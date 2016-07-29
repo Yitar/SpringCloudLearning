@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Yitar on 2016/7/26.
  */
+@Deprecated
 @Component
 @Getter
 @Setter

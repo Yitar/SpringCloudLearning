@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import me.yitar.client.ServiceAClient;
+import me.yitar.client.ServiceAFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ServiceBController {
 
     @Autowired
-    private ServiceAClient serviceAClient;
+    private ServiceAFeignClient serviceAFeignClient;
 
     @ApiOperation("微服务相互调用")
     @ApiImplicitParams({
@@ -28,7 +29,7 @@ public class ServiceBController {
     })
     @RequestMapping(value = "/hello/{userName}", method = RequestMethod.GET)
     public String greeting(@PathVariable("userName") String userName) {
-        return serviceAClient.greeting(userName);
+        return serviceAFeignClient.greeting(userName);
     }
 
 }

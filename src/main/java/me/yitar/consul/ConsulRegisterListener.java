@@ -11,6 +11,7 @@ import java.net.URI;
 /**
  * Created by Yitar on 2016/7/26.
  */
+@Deprecated
 public class ConsulRegisterListener implements ApplicationListener<ContextRefreshedEvent> {
 
     @Override

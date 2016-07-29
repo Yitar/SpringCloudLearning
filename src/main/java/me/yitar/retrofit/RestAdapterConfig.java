@@ -9,6 +9,7 @@ import retrofit2.Retrofit;
 /**
  * Created by Yitar on 2016/7/27.
  */
+@Deprecated
 @Component
 public class RestAdapterConfig {
 
