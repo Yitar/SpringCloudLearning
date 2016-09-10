@@ -16,10 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api("ServiceBApi")
 @RestController
-@RequestMapping("/ServiceB")
 public class ServiceBController {
 
-    @Autowired
     private ServiceAFeignClient serviceAFeignClient;
 
     @ApiOperation("微服务相互调用")

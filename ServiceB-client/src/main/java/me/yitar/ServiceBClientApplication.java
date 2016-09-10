@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients("ServerBClient")
 public class ServiceBClientApplication {
 
     public static void main(String[] args) {

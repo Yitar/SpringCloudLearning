@@ -11,7 +11,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
 @EnableSwagger2
 public class ServiceBApplication {
 
