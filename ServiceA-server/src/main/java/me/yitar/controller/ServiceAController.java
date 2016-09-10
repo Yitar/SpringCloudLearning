@@ -16,7 +16,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * Created by Yitar on 2016/7/27.
  */
 @RestController
-@RequestMapping("/serviceA")
 public class ServiceAController implements ServiceAFeignClient{
 
 
